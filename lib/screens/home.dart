@@ -1,3 +1,4 @@
+import 'package:evillage/screens/chat_bot.dart';
 import 'package:evillage/screens/service_screen.dart';
 import 'package:evillage/screens/settings.dart';
 import 'package:flutter/material.dart';
@@ -118,6 +119,17 @@ class _HomeState extends State<Home> {
             ServiceContainer(title: 'Plantation Tax'),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.to(() => ChatBot());
+        },
+        child: Image.asset(
+          'assets/icons/chat.png',
+          width: 30,
+          color: Colors.white,
+        ),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
     );
   }

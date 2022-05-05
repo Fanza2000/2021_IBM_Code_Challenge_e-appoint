@@ -1,3 +1,4 @@
+import 'package:evillage/screens/chat_bot.dart';
 import 'package:evillage/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -145,12 +146,43 @@ class _SettingsState extends State<Settings> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Center(
-        child: GestureDetector(
-          onTap: (() => customDialogLogOut(context)),
-          child: Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Image.asset('assets/icons/logout.png', width: 100),
+      body: Container(
+        padding: EdgeInsets.all(20),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => ChatBot());
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset('assets/icons/chat.png', width: 30),
+                      SizedBox(width: 20),
+                      Text('Contact Us'),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: (() => customDialogLogOut(context)),
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset('assets/icons/logout.png', width: 30),
+                      SizedBox(width: 20),
+                      Text('Log out'),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

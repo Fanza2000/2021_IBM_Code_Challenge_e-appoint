@@ -50,7 +50,15 @@ class BottomSheetContent extends StatelessWidget {
             size: Get.size,
             title: buttonText,
             buttonColor: Theme.of(context).primaryColor.withOpacity(0.9),
-            onPress: () {},
+            onPress: () {
+              onSubmit!();
+              Get.snackbar(
+                'Slot Booked',
+                'You slot is booked with the selected office',
+                snackPosition: SnackPosition.BOTTOM,
+                margin: EdgeInsets.only(bottom: 10),
+              );
+            },
           ),
         ],
       ),
