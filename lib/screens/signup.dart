@@ -21,6 +21,7 @@ class _SignUpState extends State<SignUp> {
   TextEditingController aadharController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   TextEditingController addressController = TextEditingController();
+  TextEditingController ageController = TextEditingController();
 
   // instance of userData model
   late User user;
@@ -34,10 +35,12 @@ class _SignUpState extends State<SignUp> {
     userData.writeIfNull('aadhar', 'aadhar');
     userData.writeIfNull('phone', '9999999999');
     userData.writeIfNull('address', 'abcd xyz');
+    userData.writeIfNull('age', '10');
     nameController = TextEditingController();
     aadharController = TextEditingController();
     phoneController = TextEditingController();
     addressController = TextEditingController();
+    ageController = TextEditingController();
   }
 
   // FirstName validator
@@ -83,13 +86,24 @@ class _SignUpState extends State<SignUp> {
       return 'Enter a valid address';
   }
 
+  String? ageValidator(String value) {
+    if (value.isEmpty) {
+      return 'Enter your age';
+    }
+    if (value.isNumericOnly) {
+      return null;
+    } else
+      return 'Enter a valid age';
+  }
+
   // function to validate creds
   bool validateCreds() {
     bool validated = false;
     if (fNameValidator(nameController.text) == null &&
         aadharValidator(aadharController.text) == null &&
         phoneValidator(phoneController.text) == null &&
-        addressValidator(addressController.text) == null) {
+        addressValidator(addressController.text) == null &&
+        ageValidator(ageController.text) == null) {
       validated = true;
     } else {
       validated = false;
@@ -109,6 +123,7 @@ class _SignUpState extends State<SignUp> {
       userData.write('aadhar', user.aadhar);
       userData.write('phone', user.phoneNo);
       userData.write('address', user.address);
+      userData.write('age', user.address);
       userData.write('loginStatus', true);
       Get.offAll(() => Home());
     }
@@ -207,6 +222,20 @@ class _SignUpState extends State<SignUp> {
                     return null;
                   } else
                     return 'Enter a valid address';
+                },
+              ),
+              SizedBox(height: 20),
+              InputTextFormField(
+                hintText: 'Age',
+                tController: addressController,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Enter your age';
+                  }
+                  if (value.isNumericOnly) {
+                    return null;
+                  } else
+                    return 'Enter a valid age';
                 },
               ),
               SizedBox(height: 30),

@@ -1,7 +1,7 @@
 import 'package:evillage/models/village_office_model.dart';
 import 'package:flutter/material.dart';
 
-List<String> officeType = ['Village Office', 'Thaluk Office'];
+List<String> officeType = ['Village Office', 'Taluk Office'];
 List<Office> offices = [
   Office(
     district: 'Trivandrum',
@@ -9,10 +9,11 @@ List<Office> offices = [
       'Alamcode Village',
       'Amboori Village',
       'Balaramapuram Village',
-      'Chemmaruthi village Office',
+      'Chemmaruthi village',
       'Elamba Village',
       'Kadakampally Village'
     ],
+    talukOffices: ['Neyyattinkara', 'Nedumangad'],
   ),
   Office(
     district: 'Kollam',
@@ -21,9 +22,10 @@ List<Office> offices = [
       'Adichanallur Village',
       'Ezhukone Village',
       'Ittiva Village',
-      'Kadakkal Village office',
+      'Kadakkal Village',
       'Mandrothuruth Village',
     ],
+    talukOffices: ['Ney'],
   ),
 ];
 List<String> districts = [

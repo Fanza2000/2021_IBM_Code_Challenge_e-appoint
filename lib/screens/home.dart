@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -16,7 +16,28 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   String selectedDistrict = 'Trivandrum';
   String selectedOfficeType = 'Village Office';
-  String selectedPlace = 'Trivandrum';
+  String selectedPlace = '';
+  List<String> places = [];
+
+  @override
+  void initState() {
+    super.initState();
+    setList();
+  }
+
+  setList() {
+    offices.forEach((element) {
+      if (element.district == selectedDistrict) {
+        if (selectedOfficeType == 'Village Office') {
+          selectedPlace = element.villageOffices![0];
+          places = element.villageOffices!;
+        } else if (selectedOfficeType == 'Taluk Office') {
+          selectedPlace = element.talukOffices![0];
+          places = element.talukOffices!;
+        }
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,21 +75,36 @@ class _HomeState extends State<Home> {
             SizedBox(height: 40),
             dropDownSelector(
               context,
+              padding: 70,
               selectedVal: selectedDistrict,
               lists: districts,
               onChanged: (String? value) {
                 setState(() {
                   selectedDistrict = value!;
+                  setList();
                 });
               },
             ),
             dropDownSelector(
               context,
+              padding: 70,
               selectedVal: selectedOfficeType,
               lists: officeType,
               onChanged: (String? value) {
                 setState(() {
                   selectedOfficeType = value!;
+                  setList();
+                });
+              },
+            ),
+            dropDownSelector(
+              context,
+              padding: 40,
+              selectedVal: selectedPlace,
+              lists: places,
+              onChanged: (String? value) {
+                setState(() {
+                  selectedPlace = value!;
                 });
               },
             ),
@@ -89,7 +125,8 @@ class _HomeState extends State<Home> {
   Widget dropDownSelector(BuildContext context,
       {String? selectedVal,
       required void Function(String?)? onChanged,
-      List<String>? lists}) {
+      List<String>? lists,
+      double? padding}) {
     return Align(
       alignment: Alignment.center,
       child: Container(
@@ -110,7 +147,7 @@ class _HomeState extends State<Home> {
               hint: Text('Select'),
               iconSize: 0,
               icon: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 70),
+                padding: EdgeInsets.symmetric(horizontal: padding!),
               ),
               items: lists!.map(
                 (String value) {
