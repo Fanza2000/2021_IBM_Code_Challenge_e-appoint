@@ -186,7 +186,7 @@ class ServiceContainer extends StatelessWidget {
         width: Get.width * 0.9,
         alignment: Alignment.centerLeft,
         padding: EdgeInsets.all(12),
-        margin: EdgeInsets.symmetric(vertical: 45),
+        margin: EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
           color: Color(0xffEEEEEE),
           borderRadius: BorderRadius.circular(10),
