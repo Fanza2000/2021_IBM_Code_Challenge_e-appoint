@@ -154,7 +154,7 @@ class _SettingsState extends State<Settings> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Get.to(() => ChatBot());
+                  Get.to(() => ChatScreen());
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),

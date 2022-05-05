@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(() => ChatBot());
+          Get.to(() => ChatScreen());
         },
         child: Image.asset(
           'assets/icons/chat.png',
