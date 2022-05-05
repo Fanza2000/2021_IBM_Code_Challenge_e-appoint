@@ -119,11 +119,12 @@ class _SignUpState extends State<SignUp> {
       user.aadhar = aadharController.text;
       user.phoneNo = phoneController.text;
       user.address = addressController.text;
+      user.age = ageController.text;
       userData.write('fName', user.fullName);
       userData.write('aadhar', user.aadhar);
       userData.write('phone', user.phoneNo);
       userData.write('address', user.address);
-      userData.write('age', user.address);
+      userData.write('age', user.age);
       userData.write('loginStatus', true);
       Get.offAll(() => Home());
     }
@@ -227,7 +228,7 @@ class _SignUpState extends State<SignUp> {
               SizedBox(height: 20),
               InputTextFormField(
                 hintText: 'Age',
-                tController: addressController,
+                tController: ageController,
                 validator: (value) {
                   if (value!.isEmpty) {
                     return 'Enter your age';

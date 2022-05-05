@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
             ),
             dropDownSelector(
               context,
-              padding: 40,
+              padding: 30,
               selectedVal: selectedPlace,
               lists: places,
               onChanged: (String? value) {

@@ -98,7 +98,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                           selectDate(context);
                         },
                         onSubmit: () {
-                          // controller.addTask();
+                          Get.back();
                         },
                       );
                     },
