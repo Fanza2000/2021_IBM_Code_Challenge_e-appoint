@@ -36,20 +36,25 @@ Home Screen
 ![image](https://user-images.githubusercontent.com/85231589/167071272-9c02fcf7-cd13-4c48-8eaa-a6bb6c70a7f2.png)
 
 Registration
+
 ![image](https://user-images.githubusercontent.com/85231589/167071568-7c5b32a7-a35c-4060-a29c-5be56a587202.png)
 
 Services Page
+
 ![image](https://user-images.githubusercontent.com/85231589/167071686-a5a08d41-5752-4841-9a9b-ad2011772837.png)
 
 Slot Booking
+
 ![image](https://user-images.githubusercontent.com/85231589/167071774-f87892a2-6a21-450d-beb8-1f41dd0df0c2.png)
 ![image](https://user-images.githubusercontent.com/85231589/167071819-349dcb84-0917-40c9-9972-629c06b136d3.png)
 ![image](https://user-images.githubusercontent.com/85231589/167071860-7a13b8e3-ffb7-4c60-9e13-c1b030970638.png)
 
 Settings Page
+
 ![image](https://user-images.githubusercontent.com/85231589/167071935-06b10292-1e4c-4b6b-b25f-d0368908ea99.png)
 
 Chatbot
+
 ![image](https://user-images.githubusercontent.com/85231589/167071987-6ecbda08-41cc-4938-bfe0-d924e2884f5e.png)
 
 ## Presentation
