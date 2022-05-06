@@ -31,7 +31,7 @@ A priority based booking system for senior citizens and the physically challenge
 Chatbot for basic enquiries.
 
 ## Screenshots
-###Home Screen
+### Home Screen
 
 ![image](https://user-images.githubusercontent.com/85231589/167071272-9c02fcf7-cd13-4c48-8eaa-a6bb6c70a7f2.png)
 
