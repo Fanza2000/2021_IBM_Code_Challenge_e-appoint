@@ -1,4 +1,4 @@
-# evillage
+# e-appoint
 
 A new Flutter project.
 
