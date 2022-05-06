@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:evillage/screens/home.dart';
-import 'package:evillage/screens/signup.dart';
+import 'package:eappoint/screens/home.dart';
+import 'package:eappoint/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';

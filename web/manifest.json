@@ -1,6 +1,6 @@
 {
-    "name": "evillage",
-    "short_name": "evillage",
+    "name": "eappoint",
+    "short_name": "eappoint",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

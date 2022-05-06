@@ -1,6 +1,6 @@
-import 'package:evillage/screens/chat_bot.dart';
-import 'package:evillage/screens/service_screen.dart';
-import 'package:evillage/screens/settings.dart';
+import 'package:eappoint/screens/chat_bot.dart';
+import 'package:eappoint/screens/service_screen.dart';
+import 'package:eappoint/screens/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';

@@ -1,4 +1,4 @@
-package com.example.evillage
+package com.example.eappoint
 
 import io.flutter.embedding.android.FlutterActivity
 

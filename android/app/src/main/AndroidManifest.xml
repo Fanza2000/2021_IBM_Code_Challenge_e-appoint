@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.evillage">
+    package="com.example.eappoint">
    <application
-        android:label="evillage"
+        android:label="eappoint"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(evillage LANGUAGES CXX)
+project(eappoint LANGUAGES CXX)
 
-set(BINARY_NAME "evillage")
+set(BINARY_NAME "eappoint")
 
 cmake_policy(SET CMP0063 NEW)
 
