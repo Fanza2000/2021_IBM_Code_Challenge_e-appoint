@@ -154,7 +154,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                   SizedBox(width: 10),
                   Text(
-                    'e-village',
+                    'e-appoint',
                     style: GoogleFonts.inter(
                       fontSize: 14,
                     ),
@@ -175,7 +175,7 @@ class _SignUpState extends State<SignUp> {
                 tController: nameController,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'Enter your first name';
+                    return 'Enter your full name';
                   }
                   if (value.isNotEmpty && value.length > 2) {
                     return null;
@@ -191,7 +191,7 @@ class _SignUpState extends State<SignUp> {
                   if (value!.isEmpty) {
                     return 'Enter your aadhar number';
                   }
-                  if (value.isNumericOnly) {
+                  if (value.isNumericOnly && value.length == 12) {
                     return null;
                   } else
                     return 'Enter a valid aadhar number';

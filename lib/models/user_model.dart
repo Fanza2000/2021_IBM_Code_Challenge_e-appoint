@@ -10,6 +10,7 @@ class User {
     this.aadhar,
     this.phoneNo,
     this.address,
+    this.age,
   });
 
   User.fromJson(Map<String, dynamic> json)

@@ -1,4 +1,4 @@
-import 'package:evillage/models/village_office_model.dart';
+import 'package:evillage/models/office_model.dart';
 import 'package:flutter/material.dart';
 
 List<String> officeType = ['Village Office', 'Taluk Office'];
